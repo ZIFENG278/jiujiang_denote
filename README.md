@@ -2,9 +2,7 @@
 > 此脚本可直接获取多个1元捐款二维码，直接扫码可捐款
 
 # Linux/Mac Usage
->仅支持Linux与Mac系统, 自行安装chrome浏览器与同版本chromedrive, 具体直接搜素selenium 
-> 
-> chromedrive安装([可参考这里](https://blog.csdn.net/wzyaiwl/article/details/103619926)), 务必配置好，否则会出现chromedriver闪退，或者selenium控制失败的情况
+>仅支持Linux与Mac系统, 自行安装chrome浏览器与同版本chromedrive, 具体直接搜素selenium chromedrive安装([可参考这里](https://blog.csdn.net/wzyaiwl/article/details/103619926)), 务必配置好，否则会出现chromedriver闪退，或者selenium控制失败的情况
 
 > 推荐使用conda环境 ***python>=3.7***
 
