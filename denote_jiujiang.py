@@ -14,8 +14,8 @@ from concurrent.futures import ThreadPoolExecutor
 def get_single_qrcode(seq):
     option = Options()
     # option.add_experimental_option('excludeSwitches', ['enable-automation'])
-    option.add_argument("--headless")
-    option.add_argument("--disable-gpu")
+    # option.add_argument("--headless")
+    # option.add_argument("--disable-gpu")
     option.add_argument('--disable-blink-features=AutomationControlled')
 
     web = Chrome(options=option)
@@ -58,7 +58,7 @@ def get_single_qrcode(seq):
 
 if __name__ == '__main__':
     print("++++++++++start++++++++++")
-    with ThreadPoolExecutor(4) as t:
+    with ThreadPoolExecutor(2) as t:
         for i in range(4):
             t.submit(get_single_qrcode, seq=i)
 
