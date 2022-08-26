@@ -1,5 +1,5 @@
 # 九江慈善捐款自动化脚本
-> 次脚本可直接获取多个1元捐款二维码，直接扫码可付款
+> 此脚本可直接获取多个1元捐款二维码，直接扫码可付款
 
 # Linux/Mac Usage
 >仅支持Linux与Mac系统, 自行安装chrome浏览器与同版本chromedrive, 具体直接搜素selenium chromedrive安装
