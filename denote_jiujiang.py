@@ -15,7 +15,7 @@ def get_single_qrcode(seq):
     option = Options()
     # option.add_experimental_option('excludeSwitches', ['enable-automation'])
     option.add_argument("--headless")
-    # option.add_argument("--disable-gpu")
+    option.add_argument("--disable-gpu")
     option.add_argument('--disable-blink-features=AutomationControlled')
 
     web = Chrome(options=option)
