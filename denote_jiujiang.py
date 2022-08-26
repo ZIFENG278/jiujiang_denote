@@ -61,7 +61,7 @@ def get_single_qrcode(seq):
 
 if __name__ == '__main__':
     print("++++++++++start++++++++++")
-    print("+++耐心等待大概35秒后完成+++")
+    print("+++耐心等待大概15秒后完成+++")
     with ThreadPoolExecutor(8) as t:
         for i in range(8):
             t.submit(get_single_qrcode, seq=i)
