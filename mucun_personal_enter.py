@@ -19,26 +19,28 @@ def get_single_qrcode(seq):
     option.add_argument('--disable-blink-features=AutomationControlled')
 
     web = Chrome(options=option)
+    # web = Chrome()
 
-    url_jiujiang = "http://wx.fsnh.n.gongyibao.cn/#/projectdetail?id=e5897e5a-f1d9-42ad-8dc3-34a271699b3f"
+
+    url_jiujiang = "http://wx.fsnh.n.gongyibao.cn/#/togdetail?id=c2ee4d70-0897-4b36-8315-1a76694eae67"
     web.get(url_jiujiang)
     # time.sleep(3)
 
-    web.find_element_by_xpath('//*[@id="app"]/div/div[3]/div[1]/ul/li[2]/a/button').click()  # click denote directly
+    web.find_element_by_xpath('//*[@id="app"]/div/div[4]/ul/li[3]/a/button').click()  # click denote directly
     # web.switch_to.window(web.window_handles[-1])
     time.sleep(2)
 
     # input pre data and click anonymous, protocol
-    web.find_element_by_xpath('//*[@id="app"]/div/div[2]/label').click()  # click agree protocol
+    web.find_element_by_xpath('//*[@id="app"]/div/div[2]/label').click()  # click agree protocol  //*[@id="ptcol"]
     # time.sleep(0.1)
-    web.find_element_by_xpath('//*[@id="app"]/div/form/dl[2]/dd/label').click()  # click anonymous
+    # web.find_element_by_xpath('//*[@id="app"]/div/form/dl[2]/dd/label').click()  # click anonymous
     # time.sleep(0.1)
 
     web.find_element_by_xpath('//*[@id="app"]/div/form/dl[1]/dd/div/a[4]/div[2]/input').click()  # click input
     # time.sleep(0.1)
     web.find_element_by_xpath('//*[@id="app"]/div/form/dl[1]/dd/div/a[4]/div[2]/input').send_keys("1")
     # time.sleep(0.5)
-    web.find_element_by_xpath('//*[@id="app"]/div/form/a[2]/div[2]/div[2]/input').send_keys("烽哥")
+    web.find_element_by_xpath('//*[@id="app"]/div/form/a[2]/div[2]/div[2]/input').send_keys("上西张子烽")
     # time.sleep(0.1)
     web.find_element_by_xpath('//*[@id="app"]/div/div[3]/button').click()  # click go to payment
     time.sleep(0.1)
@@ -63,7 +65,7 @@ if __name__ == '__main__':
     print("++++++++++start++++++++++")
     print("+++耐心等待大概15秒后完成+++")
     with ThreadPoolExecutor(8) as t:
-        for i in range(81):
+        for i in range(100):
             t.submit(get_single_qrcode, seq=i)
 
     print("----------finish----------")
